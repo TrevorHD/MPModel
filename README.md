@@ -10,7 +10,7 @@ Dispersal is an important factor in how organisms spread across space through ti
 
 **MPPlotting** *(.R)* - Plots results from the metapopulation model simulations, namely how mean initial patch occupancy time varies between patches and presence/absence of wind speed variation.
 
-**MPExtras** *(.R)* - Mmetapopulation models with extra dispersal kernels that were not used in the simulations.
+**MPExtras** *(.R)* - Metapopulation models with extra dispersal kernels that were not used in the simulations.
 
 **MPInfo** *(.Rmd)* - R Markdown used to create a detailed description of what this project is.
 
@@ -18,6 +18,6 @@ Dispersal is an important factor in how organisms spread across space through ti
 
 **Figure1** *(.jpeg)* - Simulation results for patch configuration 1.
 
-**Figure1** *(.jpeg)* - Simulation results for patch configuration 1.
+**Figure2** *(.jpeg)* - Simulation results for patch configuration 2.
 
-**Figure1** *(.jpeg)* - Simulation results for patch configuration 1.
+**Figure3** *(.jpeg)* - Simulation results for patch configuration 3.
