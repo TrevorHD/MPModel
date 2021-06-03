@@ -16,6 +16,8 @@ Dispersal is an important factor in how organisms spread across space through ti
 
 **MPExtras** *(.R)* - Metapopulation models with extra dispersal kernels that were not used in the simulations.
 
+**MPInfo** *(.Rmd)* - R Markdown used to create a detailed description of what this project is.
+
 ## Figures
 
 **Figure1** *(.jpeg)* - Simulation results for patch configuration 1.
@@ -26,8 +28,18 @@ Dispersal is an important factor in how organisms spread across space through ti
 
 ## Other
 
-**MPInfo** *(.Rmd)* - R Markdown used to create a detailed description of what this project is.
-
 **MPInfo** *(.pdf)* - A more detailed description of what this project is and how it works.
 
 **Header** *(.tex)* A TeX file with header specifications.
+
+<br/>
+
+# Featured Images
+
+Noteworthy or interesting plots, images, figures, and other graphical outputs from the code are included below.
+
+<kbd>![](https://github.com/TrevorHD/MPModel/blob/master/Figures/Figure1.jpeg)</kbd>
+
+<kbd>![](https://github.com/TrevorHD/MPModel/blob/master/Figures/Figure2.jpeg)</kbd>
+
+<kbd>![](https://github.com/TrevorHD/MPModel/blob/master/Figures/Figure3.jpeg)</kbd>
