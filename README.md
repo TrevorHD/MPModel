@@ -36,7 +36,7 @@ Dispersal is an important factor in how organisms spread across space through ti
 
 # Featured Images
 
-Noteworthy or interesting plots, images, figures, and other graphical outputs from the code are included below.
+The images below display mean colonisation times for three different configurations of discrete habitat patches in the presence/absence of wind speed variation. Distances in the patch arrangement are given in metres, and patch 1 is the founder patch. Error bars indicate a 95% confidence interval for the estimate of mean colonisation time, and numbers in parentheses indicate the proportion of simulations in which colonisation was achieved in instances where this proportion was less than 1.
 
 <kbd>![](https://github.com/TrevorHD/MPModel/blob/master/Figures/Figure1.jpeg)</kbd>
 
