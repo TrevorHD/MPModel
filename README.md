@@ -26,6 +26,10 @@ Results indicate that when variation in wind speed exists, these thistles are ab
 
 **MP_Plots_3** *(.jpeg)* - Plots of simulation results for a cluster of patches followed by several distant patches.
 
+## Reports
+
+**MP_Report** *(.pdf)* - Report for the case study.
+
 ## Scripts
 
 **MP_Script_1** *(.R)* - Script for defining key function used in dispersal/spread simulations.
@@ -37,10 +41,6 @@ Results indicate that when variation in wind speed exists, these thistles are ab
 **MP_Script_4** *(.Rmd)* - Script for rendering output to PDF.
 
 **MP_Script_Header** *(.tex)* - Script for storing the markdown info used to generate the report header.
-
-## Reports
-
-**MP_Report** *(.pdf)* - Report for the case study.
 
 <br/>
 
