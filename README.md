@@ -1,45 +1,59 @@
 # Overview
 
-Dispersal is an important factor in how organisms spread across space through time, and variation in the factors that influence dispersal affects the rate at which spread occurs. Here, we use a spatially explicit metapopulation model to examine how the spread rate of the wind-dispersed invasive thistle *Carduus nutans* is affected by variation in wind speeds. Results indicate that when variation in wind speed exists, these thistles are able to invade unoccupied areas faster than when there is no variation in wind speed. Increased variation in wind speed makes extreme wind events more frequent and increases the likelihood of long-distance dispersal, thus making distant habitats accessible when they may not be under less variable wind conditions. This has implications for controlling the spread of invasive species, as better understanding variation within dispersal and the frequency of long-distance dispersal events allows us to better predict how quickly invasives spread.
+A case study examining how variation in the factors that influence the dispersal of organisms affects the rate at which their spread occurs. Here, we use a spatially explicit metapopulation model to examine how the spread rate of the wind-dispersed invasive thistle *Carduus nutans* is affected by variation in wind speeds.
+
+Results indicate that when variation in wind speed exists, these thistles are able to invade unoccupied areas faster than when there is no variation in wind speed. Increased variation in wind speed makes extreme wind events more frequent and increases the likelihood of long-distance dispersal, thus making distant habitats accessible when they may not be under less variable wind conditions. This has implications for controlling the spread of invasive species, as better understanding variation within dispersal and the frequency of long-distance dispersal events allows us to better predict how quickly invasives spread.
 
 <br/>
 
 # Files
 
-## Scripts
+## Data
 
-**MPFunctions** *(.R)* - A script that defines all functions used in simulations and plotting.
+**MP_Data_WeatherA** *(.csv)* - Spreadsheet with data on weather conditions (wind speed, temperature, solar radiation, pressure, and precipitation) from a local field site.
 
-**MPSimulations** *(.R)* - Runs simulations of the metapopulation model. For the dispersal aspect of the model, two kernels are used: one in which there is no variation in wind speed and another in which wind speeds are sampled from a distribution wind speeds obtained from weather data.
+**MP_Data_WeatherB** *(.csv)* - Spreadsheet with data on weather conditions (wind speed, temperature, solar radiation, pressure, and precipitation) from a local field site.
 
-**MPPlotting** *(.R)* - Plots results from the metapopulation model simulations, namely how mean initial patch occupancy time varies between patches and presence/absence of wind speed variation.
+## Extras
 
-**MPExtras** *(.R)* - Metapopulation models with extra dispersal kernels that were not used in the simulations.
-
-**MPInfo** *(.Rmd)* - R Markdown used to create a detailed description of what this project is.
+**MP_Script_Extras** *(.R)* - Script for defining additional growth/dispersal models that were not used in the simulations.
 
 ## Figures
 
-**Figure1** *(.jpeg)* - Simulation results for patch configuration 1.
+**MP_Plots_1** *(.jpeg)* - Plots of simulation results for a series of increasingly distant thistle patches.
 
-**Figure2** *(.jpeg)* - Simulation results for patch configuration 2.
+**MP_Plots_2** *(.jpeg)* - Plots of simulation results for two separate clusters of thistle patches.
 
-**Figure3** *(.jpeg)* - Simulation results for patch configuration 3.
+**MP_Plots_3** *(.jpeg)* - Plots of simulation results for a cluster of patches followed by several distant thistle patches.
 
-## Other
+## Scripts
 
-**MPInfo** *(.pdf)* - A more detailed description of what this project is and how it works.
+**MP_Script_1** *(.R)* - Script for defining key function used in dispersal/spread simulations.
 
-**Header** *(.tex)* A TeX file with header specifications.
+**MP_Script_2** *(.R)* - Script for running simulations.
+
+**MP_Script_3** *(.R)* - Script for generating figures.
+
+**MP_Script_4** *(.Rmd)* - Script for rendering output to PDF.
+
+**MP_Script_Header** *(.tex)* - Script for storing the markdown info used to generate the report header.
+
+## Reports
+
+**MP_Report** *(.pdf)* - Report for the case study.
 
 <br/>
 
 # Featured Images
 
-The images below display mean colonisation times for three different configurations of discrete habitat patches in the presence/absence of wind speed variation. Distances in the patch arrangement are given in metres, and patch 1 is the founder patch. Error bars indicate a 95% confidence interval for the estimate of mean colonisation time, and numbers in parentheses indicate the proportion of simulations in which colonisation was achieved in instances where this proportion was less than 1.
+Mean colonisation times for a series of increasingly distant thistle patches in the presence/absence of wind speed variation. Distances in the patch arrangement are given in metres, and patch 1 is the founder patch. Error bars indicate a 95% confidence interval for the estimate of mean colonisation time, and numbers in parentheses indicate the proportion of simulations in which colonisation was achieved in instances where this proportion was less than 1.
 
-<kbd>![](https://github.com/TrevorHD/MPModel/blob/master/Figures/Figure1.jpeg)</kbd>
+<kbd>![](https://github.com/TrevorHD/MPModel/blob/master/Figures/MP_Plots_1.jpeg)</kbd>
 
-<kbd>![](https://github.com/TrevorHD/MPModel/blob/master/Figures/Figure2.jpeg)</kbd>
+Mean colonisation times for two separate clusters of thistle patches. Given the distance between the two clusters of patches, the patches that are extremely distant from the founder patch are much less likely to be colonised, especially when simulating dispersal using only mean wind speeds.
 
-<kbd>![](https://github.com/TrevorHD/MPModel/blob/master/Figures/Figure3.jpeg)</kbd>
+<kbd>![](https://github.com/TrevorHD/MPModel/blob/master/Figures/MP_Plots_2.jpeg)</kbd>
+
+Mean colonisation times for a cluster of patches followed by several distant thistle patches. Colonisation trends resemble those found in the first patch configuration.
+
+<kbd>![](https://github.com/TrevorHD/MPModel/blob/master/Figures/MP_Plots_3.jpeg)</kbd>
