@@ -13,7 +13,7 @@ lines(density(na.omit(WALD(10000000, H = 1.41, means = FALSE)), from = 0, to = 5
 PlotData <- sim.plot(SimData1a, SimData1b)
 
 # Prepare graphics device
-jpeg(filename = "Figure1.jpeg", width = 1300, height = 800, units = "px")
+jpeg(filename = "Figures/MP_Plots_1.jpeg", width = 1300, height = 800, units = "px")
 
 # Create blank page
 grid.newpage()
@@ -55,7 +55,7 @@ dev.off()
 PlotData <- sim.plot(SimData2a, SimData2b)
 
 # Prepare graphics device
-jpeg(filename = "Figure2.jpeg", width = 1300, height = 800, units = "px")
+jpeg(filename = "Figures/MP_Plots_2.jpeg", width = 1300, height = 800, units = "px")
 
 # Create blank page
 grid.newpage()
@@ -99,7 +99,7 @@ dev.off()
 PlotData <- sim.plot(SimData3a, SimData3b)
 
 # Prepare graphics device
-jpeg(filename = "Figure3.jpeg", width = 1300, height = 800, units = "px")
+jpeg(filename = "Figures/MP_Plots_3.jpeg", width = 1300, height = 800, units = "px")
 
 # Create blank page
 grid.newpage()

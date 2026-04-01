@@ -1,10 +1,13 @@
-##### Load necessary libraries ----------------------------------------------------------------------------
+##### Prepare workspace -----------------------------------------------------------------------------------
 
 # Load packages
 library(SuppDists)
 library(tidyverse)
 library(grid)
 library(gridBase)
+
+# Set working directory
+setwd("~/GitHub/MPModel")
 
 
 
@@ -13,11 +16,11 @@ library(gridBase)
 ##### Set up wind dispersal function ----------------------------------------------------------------------
 
 # Load in raw weather data
-ws.data1 <- read.csv(file.choose())
-ws.data2 <- read.csv(file.choose())
+data_ws1 <- read.csv("Data/MP_Data_WeatherA.csv")
+data_ws2 <- read.csv("Data/MP_Data_WeatherB.csv")
 
 # Create vector of all wind speed observations
-ws.values <- c(ws.data1$Wind1, ws.data2$Wind1)
+ws.values <- c(data_ws1$Wind1, data_ws2$Wind1)
 
 # Assume no seed release occurs for wind speeds of zero, so remove zero values
 ws.values <- ws.values[ws.values > 0]

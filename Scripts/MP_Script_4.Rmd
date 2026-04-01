@@ -5,7 +5,7 @@ output:
   pdf_document: 
     fig_caption: yes
     toc: true
-  in_header: "Header.tex"
+  in_header: "MP_Script_Header.tex"
 fontsize: 12pt
 header-includes:
   - \usepackage{xcolor}
@@ -19,6 +19,10 @@ header-includes:
 
 ```{r setup, include = FALSE}
 
+# Set working directory
+setwd("~/GitHub/MPModel")
+
+# Set chunk options
 knitr::opts_chunk$set(echo = TRUE)
 
 ```
@@ -37,7 +41,7 @@ Variation within dispersal pathways is almost always present, but the extent of 
 
 Previous studies have shown that this wind-based dispersal in *C. nutans* is highly leptokurtic, and sensitive to plant characteristics such as seed release height as well as environmental characteristics such as wind speed^3^. Furthermore, elasticity analyses on spatial integral projection models of *C. nutans* spread show that, when compared to other plant and/or environmental characteristics, the extent of variation in wind speeds has the strongest effect on how this thistle spreads^4^. This is likely because increased variance in the distribution of wind speeds makes extreme wind events more likely to occur, thus causing long-distance dispersal events to be more frequent and allowing for faster spatial expansion of a given thistle population.
 
-To further build upon the previous analyses that use integral projection models, we address whether the increased spread of this invasive thistle caused by increased variation in wind speed also occurs in a metapopulation framework. While the integral projection models assume a homogenous landscape and are representative of areas such as open pastures and farmland, we instead assume that the thistles can only exist in habitable patches of land and that all other areas are uninhabitable; such an assumption would be suitable for more fragmented areas. In order to examine the effects of wind speed variance in these patchy landscapes, we compare how quickly thistle populations expand using two dispersal kernels: one in which there is no variation in wind speed and another in which wind speeds are sampled from a distribution wind speeds obtained from weather data. We predict that the dispersal model with wind speed variation will allow patches to become occupied faster than the model without wind speed variation since there will be an increased chance of long-distance dispersal.
+To further build upon the previous analyses that use integral projection models, we address whether the increased spread of this invasive thistle caused by increased variation in wind speed also occurs in a metapopulation framework. While the integral projection models assume a homogeneous landscape and are representative of areas such as open pastures and farmland, we instead assume that the thistles can only exist in habitable patches of land and that all other areas are uninhabitable; such an assumption would be suitable for more fragmented areas. In order to examine the effects of wind speed variance in these patchy landscapes, we compare how quickly thistle populations expand using two dispersal kernels: one in which there is no variation in wind speed and another in which wind speeds are sampled from a distribution wind speeds obtained from weather data. We predict that the dispersal model with wind speed variation will allow patches to become occupied faster than the model without wind speed variation since there will be an increased chance of long-distance dispersal.
 
 # Modelling Approach
 
@@ -53,26 +57,26 @@ All dispersal events were simulated from a dispersal kernel derived from the WAL
 
 Two types of wind dispersal were modelled in our analyses. The first wind dispersal model is based on a mean wind speed with dispersal events being sampled from $p(r)$ using previous *C. nutans* measurements^3^ such that the mean seed release height $\bar H$ was 1.41 m and the mean seed terminal velocity $\bar F$ was 0.35 m/s; the mean wind speed $\bar U$ was 2.15 m/s and was taken as the average of all non-zero wind speeds measured at the site (seed release was assumed not to occur for wind speeds of zero). The second wind dispersal model incorporates additional variation by accounting for the different wind speeds detected at the site such that dispersal events are sampled over the kernel \begin{equation} k(r) = \int p(U)p(r) \,dU \end{equation} \noindent where $p(U)$ is the probability density function for wind speed. Note that this second model still uses the same values of $\bar H$ and $\bar F$ as the first one, but the values of $\lambda'$ and $\mu'$ used to create the distribution $p(r)$ are different because the wind speeds differ.
 
-It is important to acknowledge that the WALD model itself assumes that wind turbulence is low, wind flow is vertically homogenous, and terminal velocity is achieved immediately upon seed release, all of which are not always accurate regarding wind dispersal events. Also, because we are using an unstructured population model, we are not accounting for heterogeneity within populations and assume that all plants are the same height, meaning that seeds are released from the same height above the ground. We further assume that dispersal occurs via wind only and there is no secondary dispersal which, as is discussed later, may not be the case for this system and can underestimate the rate at which this invasive species spreads.
+It is important to acknowledge that the WALD model itself assumes that wind turbulence is low, wind flow is vertically homogeneous, and terminal velocity is achieved immediately upon seed release, all of which are not always accurate regarding wind dispersal events. Also, because we are using an unstructured population model, we are not accounting for heterogeneity within populations and assume that all plants are the same height, meaning that seeds are released from the same height above the ground. We further assume that dispersal occurs via wind only and there is no secondary dispersal which, as is discussed later, may not be the case for this system and can underestimate the rate at which this invasive species spreads.
 
 # Results
 
 As we might expect, an increase in the distance between a given patch and the founder patch corresponded to an increase in the time elapsed before that given patch became occupied, with more distant patches colonised later than closer patches; that is, colonisation time was positively correlated with distance from the founder patch. For example, across all simulations and patch configurations, patches that were less than 20 m from the founder patch were on average colonised in a year and ones 50 m from the founder patch in 4 years or less. However, this distance-dependent increase in colonisation time was significantly less pronounced when variation in wind speeds was present, suggesting that there is likely an interaction between patch distance and wind speed variation.
 
 \begin{figure}[h]
-  \includegraphics{Figures/Figure1.jpeg}
+  \includegraphics{Figures/MP_Plots_1.jpeg}
   \caption{Patch configuration 1 (upper) and mean colonisation time for all patches in the presence/absence of wind speed variation (lower). Distances in the patch arrangement are given in metres, and patch 1 is the founder patch. Error bars indicate a 95\% confidence interval for the estimate of mean colonisation time, and numbers in parentheses indicate the proportion of simulations in which colonisation was achieved in instances where this proportion was less than 1.}
 \end{figure}
 
 \begin{figure}[h]
-  \includegraphics{Figures/Figure2.jpeg}
+  \includegraphics{Figures/MP_Plots_2.jpeg}
   \caption{Patch configuration 2 (upper) and mean colonisation time for all patches in the presence/absence of wind speed variation (lower). Distances in the patch arrangement are given in metres, and patch 1 is the founder patch. Error bars indicate a 95\% confidence interval for the estimate of mean colonisation time, and numbers in parentheses indicate the proportion of simulations in which colonisation was achieved in instances where this proportion was less than 1.}
 \end{figure}
 
 In the first patch configuration (Figure 1), as we would expect, we observe that patches further from the founder patch take longer to colonise; initial colonisation times for the patches close to the founder patch were on the order of only a few years and were relatively unaffected by variation in wind speed. As distance from the founder patch increased, the mean initial colonisation time increased as well, but the difference in said time became more pronounced when comparing simulations with and without wind speed variation. For example, for a patch 100 m from the founder patch, it took approximately 9 years for colonisation to occur in the absence of wind speed variation, but only 4 years if such variation was accounted for; for a patch 200 m away, this difference becomes larger, with a colonisation time of 27 years for no wind variation and 6 years with variation. Trends similar to those discussed here were also observed in the third patch configuration (Figure 3).
 
 \begin{figure}[h]
-  \includegraphics{Figures/Figure3.jpeg}
+  \includegraphics{Figures/MP_Plots_3.jpeg}
   \caption{Patch configuration 3 (upper) and mean colonisation time for all patches in the presence/absence of wind speed variation (lower). Distances in the patch arrangement are given in metres, and patch 1 is the founder patch. Error bars indicate a 95\% confidence interval for the estimate of mean colonisation time, and numbers in parentheses indicate the proportion of simulations in which colonisation was achieved in instances where this proportion was less than 1.}
 \end{figure}
 
